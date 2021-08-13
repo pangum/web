@@ -5,7 +5,7 @@ import (
 	`github.com/storezhang/pangu`
 )
 
-func newEcho(config *pangu.Config) (echo *echox.Echo, err error) {
+func newEcho(config *pangu.Config) (echo *Echo, err error) {
 	panguConfig := new(panguConfig)
 	if err = config.Load(panguConfig); nil != err {
 		return
@@ -17,7 +17,9 @@ func newEcho(config *pangu.Config) (echo *echox.Echo, err error) {
 	if 0 != len(server.Cros.Origins) {
 		options = append(options, echox.Cros(server.Cros.Credentials, server.Cros.Origins...))
 	}
-	echo = echox.New(options...)
+	echo = &Echo{
+		Echo: echox.New(options...),
+	}
 
 	return
 }
