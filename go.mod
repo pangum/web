@@ -3,8 +3,8 @@ module github.com/storezhang/pangu-web
 go 1.16
 
 require (
-	github.com/storezhang/echox/v2 v2.1.1
-	github.com/storezhang/pangu v1.2.7
+	github.com/storezhang/echox/v2 v2.1.2
+	github.com/storezhang/pangu v1.3.9
 )
 
 // replace github.com/storezhang/pangu => ../../storezhang/pangu
