@@ -1,4 +1,4 @@
-module github.com/storezhang/pangu-web
+module github.com/pangum/web
 
 go 1.16
 
