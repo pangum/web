@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/storezhang/echox/v2 v2.2.4
-	github.com/storezhang/pangu v1.3.9
+	// github.com/pangum/pangu v0.0.0
 )
 
 // replace github.com/storezhang/pangu => ../../storezhang/pangu
