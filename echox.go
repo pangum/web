@@ -1,8 +1,8 @@
 package web
 
 import (
+	`github.com/pangum/pangu`
 	`github.com/storezhang/echox/v2`
-	`github.com/storezhang/pangu`
 )
 
 func newEcho(config *pangu.Config) (echo *Echo, err error) {
