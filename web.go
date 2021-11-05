@@ -15,7 +15,7 @@ func newEcho(config *pangu.Config) (echo *Echo, err error) {
 	options := echox.NewOptions(echox.Addr(server.Host, server.Port))
 
 	// 配置域名
-	if "" != server.Domain {
+	if `` != server.Domain {
 		options = append(options, echox.Domain(server.Domain))
 	}
 
