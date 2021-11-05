@@ -14,11 +14,6 @@ func newEcho(config *pangu.Config) (echo *Echo, err error) {
 	server := _panguConfig.Http.Server
 	options := echox.NewOptions(echox.Addr(server.Host, server.Port))
 
-	// 配置域名
-	if `` != server.Domain {
-		options = append(options, echox.Domain(server.Domain))
-	}
-
 	// 处理跨域
 	if 0 != len(server.Cros.Origins) {
 		options = append(options, echox.Cros(server.Cros.Credentials, server.Cros.Origins...))
