@@ -15,9 +15,14 @@ func newEcho(config *pangu.Config) (echo *Echo, err error) {
 	options := echox.NewOptions(echox.Addr(server.Host, server.Port))
 
 	// 处理跨域
-	if 0 != len(server.Cros.Origins) {
+	if nil != server.Cros {
 		options = append(options, echox.Cros(server.Cros.Credentials, server.Cros.Origins...))
 	}
+	// 处理代理
+	if nil != server.Proxy {
+		options = append(options, echox.Proxy(server.Proxy.Scheme, server.Proxy.Domain, server.Proxy.Port))
+	}
+
 	echo = &Echo{
 		Echo: echox.New(options...),
 	}
