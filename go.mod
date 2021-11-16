@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/pangum/pangu v0.0.7
-	github.com/storezhang/echox/v2 v2.2.9
+	github.com/storezhang/echox/v2 v2.3.0
 	github.com/storezhang/gox v1.8.1
 )
 
