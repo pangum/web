@@ -1,7 +1,7 @@
 package web
 
 import (
-	`github.com/storezhang/gox`
+	"github.com/goexl/gox"
 )
 
 type proxy struct {
